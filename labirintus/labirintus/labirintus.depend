@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1589305734 source:c:\users\kt\desktop\labirintus\labirintus\labyrinth.c
+	<stdio.h>
+	<stdlib.h>
+	"labyrinth.h"
+
+1589305666 c:\users\kt\desktop\labirintus\labirintus\labyrinth.h
+
+1589305683 source:c:\users\kt\desktop\labirintus\labirintus\main.c
+	<stdio.h>
+	<stdlib.h>
+	"labyrinth.h"
+
+1589477792 source:c:\users\admin\desktop\labirintus-t\labirintus\labirintus\main.c
+	<stdio.h>
+	<stdlib.h>
+	"labyrinth.h"
+
+1589481029 c:\users\admin\desktop\labirintus-t\labirintus\labirintus\labyrinth.h
+
+1589480966 source:c:\users\admin\desktop\labirintus-t\labirintus\labirintus\labyrinth.c
+	<stdio.h>
+	<stdlib.h>
+	"labyrinth.h"
+
+1589491444 source:c:\users\admin\desktop\labirintus-jo\labirintus\labirintus\main.c
+	<stdio.h>
+	<stdlib.h>
+	"labyrinth.h"
+
+1589543324 c:\users\admin\desktop\labirintus-jo\labirintus\labirintus\labyrinth.h
+
+1589543615 source:c:\users\admin\desktop\labirintus-jo\labirintus\labirintus\labyrinth.c
+	<stdio.h>
+	<stdlib.h>
+	"labyrinth.h"
+
+1589576283 source:c:\users\admin\desktop\jatek-jo\labirintus\labirintus\main.c
+	<stdio.h>
+	<stdlib.h>
+	"labyrinth.h"
+
+1589577709 c:\users\admin\desktop\jatek-jo\labirintus\labirintus\labyrinth.h
+
+1589576873 source:c:\users\admin\desktop\jatek-jo\labirintus\labirintus\labyrinth.c
+	<stdio.h>
+	<stdlib.h>
+	"labyrinth.h"
+
+1589840232 source:c:\users\admin\desktop\jatek-jo\jatek-ok\labirintus\labirintus\main.c
+	<stdio.h>
+	<stdlib.h>
+	"labyrinth.h"
+
+1589840279 c:\users\admin\desktop\jatek-jo\jatek-ok\labirintus\labirintus\labyrinth.h
+
+1589840264 source:c:\users\admin\desktop\jatek-jo\jatek-ok\labirintus\labirintus\labyrinth.c
+	<stdio.h>
+	<stdlib.h>
+	"labyrinth.h"
+
