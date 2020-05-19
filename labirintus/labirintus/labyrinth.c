@@ -132,7 +132,7 @@ int leiras()
 {
     int opcio;
 
-    printf("Egy rab szokest tervez a bortonbol,\nsegits neki, hogy minel rovidebb ido\nalatt megtalalja a kivezeto utat!");
+    printf("Egy rab szokest tervez a bortonbol,\nsegits neki, hogy minel rovidebb ido\nalatt megtalalja a kivezeto utat!\nAhhoz hogy kinyiljon az ajto meg kell talalni a kulcsot.\nA jatekban 3 fokozatosan nehezedo palyan kell atmenni.");
 
     printf("\n\n1-Menu / 2- kilepes\n");
     opcio=getchar();
