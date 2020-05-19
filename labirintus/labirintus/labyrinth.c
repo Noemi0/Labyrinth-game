@@ -35,6 +35,9 @@ int Mozgas(BortonPTR l, RabPTR m, int d)
 void menu()
 {
     system("@cls||clear");
+    printf("\033[1;31m");
+    printf("A SZOKES\n\n");
+    printf("\033[0m");
     printf("Main menu\n");
     printf("1.Uj jatek\n");
     printf("2.Leiras\n");
@@ -43,15 +46,33 @@ void menu()
 }
 
 
-int ujJatek()
+int ujJatek(int szint)
 {
     BortonPTR l;
     RabPTR m = (RabPTR)malloc(sizeof(struct Rab));
+    if(!m){
+        printf("Sikertlen helyfoglalas");
+    }
     int status = 0;
     int irany;
     int kulcs=0;
+    system("@cls||clear");
 
-    l = BeolvasBorton("palya3.txt", m);
+    if(szint == 1)
+    {
+        l = BeolvasBorton("labirintus.txt", m);
+    }
+    else if(szint == 2)
+    {
+        l = BeolvasBorton("palya2.txt", m);
+
+    }
+    else
+    {
+        l = BeolvasBorton("palya3.txt", m);
+    }
+
+
     KirajzolBorton(l);
 
     while (!status || !kulcs)
@@ -67,11 +88,31 @@ int ujJatek()
         KirajzolBorton(l);
 
     }
-    printf("Gratulalok!\nSikeresen megszoktel a bortonbol!\n");
+
+
+
+    if(szint==3)  //ha utolso szint
+    {
+        printf("Gratulalok!\nSikeresen vegig vitted a palyakat!\n");
+        getchar();
+        return 0;
+    }
+    else
+    {
+        printf("Gratulalok!\n eljutottal a %i szintre!\n", szint+1);
+
+
+    }
     getchar();
+
+    szint=szint+1;
     freeBorton(l);
     free(m);
+
+    return szint;
+
 }
+
 
 int szabalyok()
 {
@@ -209,6 +250,11 @@ BortonPTR BeolvasBorton(char * filename, RabPTR m)
 {
     FILE *in = fopen(filename, "r");
     BortonPTR l = (BortonPTR)malloc(sizeof(struct Borton));
+    if(!l)
+    {
+        printf("Sikertelen helyfoglalas!");
+        return 0;
+    }
     int i, j;
     int a,b;
 
@@ -217,9 +263,17 @@ BortonPTR BeolvasBorton(char * filename, RabPTR m)
 
 
     l->palya=(int**)malloc(l->sor*sizeof(int*));
-    for (i=0; i < l->sor; i++)
+    if (!l->palya) {
+		printf("Sikertelen helyfoglalas");
+		return 0;
+	}
+    for (i=0; i < l->sor; i++){
         l->palya[i]=(int*)malloc(l->oszlop*sizeof(int));
-
+        if (!l->palya[i]) {
+			printf("Sikertelen helyfoglalas");
+			return 0;
+		}
+    }
     for (i=0; i< l->sor; i++)
         for (j=0; j< l->oszlop; j++)
         {
